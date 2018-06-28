@@ -15,12 +15,8 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/teste', function () {
-    return '<html><body>Agenda Web</body></html>';
-});
-
-Route::get('/testar', function () {
-    return '<html><body>Testando Minha Agenda</body></html>';
+Route::get('/agenda', function () {
+    return '<html><body>AgendaWeb</body></html>';
 });
 
 Auth::routes();
@@ -29,3 +25,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 
 Route::resource('message', 'MessageController');
+Route::resource('pessoa', 'PessoaController');
+Route::resource('telefone', 'TelefoneController');
